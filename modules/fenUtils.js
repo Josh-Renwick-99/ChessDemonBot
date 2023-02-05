@@ -122,4 +122,7 @@ function fenToEmoji (fenString, emojiCache){
     return emojiString;
 }
 
-module.exports ={fenToEmoji};
+module.exports = {
+    isFen,
+    fenToEmoji,
+  };

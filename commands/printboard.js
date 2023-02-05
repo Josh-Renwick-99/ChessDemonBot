@@ -1,12 +1,13 @@
 const config = require("../config.js");
-const { fenToEmoji } = require("../modules/fenUtils.js");
+const { fenToEmoji, isFen } = require("../modules/fenUtils.js");
 const { settings } = require("../modules/settings.js");
 
 exports.run = async (client, message, args, level) => {
   let fenString = args.reduce((accumulator, currentValue) => {
     return accumulator + currentValue + " ";
   }, "");
-  let emojiString = fenToEmoji(fenString, client.emojis.cache);
+
+  let emojiString = isFen(fenString) ? fenToEmoji(fenString, client.emojis.cache) : `'${fenString}' is not a valid FEN board position`;
   message.channel.send(emojiString);
 };
 
