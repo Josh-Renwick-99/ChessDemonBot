@@ -1,9 +1,41 @@
 const { default: FenParser } = require("@chess-fu/fen-parser");
 const { assert } = require("chai");
+const { MessageEmbed } = require('discord.js');
+
+function createFenEmbed(emojiString, turn, userName, san){
+    var ranks = emojiString.split(/\r?\n/);
+    const fenEmbed = new MessageEmbed()
+    .setColor(0x0099FF)
+	.setTitle('Game')
+	.setAuthor(userName)
+    .addField('Turn: ', turn)
+    .setDescription(emojiString)
+    .addField('Move List: ', san)
+	.setTimestamp()
+
+    return fenEmbed;
+}
 
 function isFen(fenString){
     const fen = new FenParser(fenString);
     return fen.isValid;
+}
+
+function printBottom(emojiCache, emojiString){
+
+    const ra = emojiCache.find(emoji => emoji.name === 'ra');
+    const rb = emojiCache.find(emoji => emoji.name === 'rb');
+    const rc = emojiCache.find(emoji => emoji.name === 'rc');
+    const rd = emojiCache.find(emoji => emoji.name === 'rd');
+    const re = emojiCache.find(emoji => emoji.name === 're');
+    const rf = emojiCache.find(emoji => emoji.name === 'rf');
+    const rg = emojiCache.find(emoji => emoji.name === 'rg');
+    const rh = emojiCache.find(emoji => emoji.name === 'rh');
+    const sg = emojiCache.find(emoji => emoji.name === 'sg');
+
+    emojiString += `${sg}${ra}${rb}${rc}${rd}${re}${rf}${rg}${rh}${sg}`
+    let returnString = `${sg}${ra}${rb}${rc}${rd}${re}${rf}${rg}${rh}${sg}\n` + emojiString;
+    return returnString;
 }
 
 function fenToEmoji (fenString, emojiCache){
@@ -16,7 +48,9 @@ function fenToEmoji (fenString, emojiCache){
     }
     let emojiString = "";
     let squareColour = true;
+    let rankNumber = 8;
     for (let ranks of fen.ranks) {
+        emojiString += '<:c'+ rankNumber + ':' + (emojis.find(emoji => emoji.name === "c" + rankNumber) + '>');
         squareColour = !squareColour;
         console.log(ranks);
         for (let char of ranks){
@@ -117,12 +151,15 @@ function fenToEmoji (fenString, emojiCache){
             } 
             squareColour = !squareColour;
         }
+        emojiString += '<:c'+ rankNumber + ':' + (emojis.find(emoji => emoji.name === "c" + rankNumber) + '>');
         emojiString += '\n';
+        rankNumber--;
     }
-    return emojiString;
+    return printBottom(emojiCache, emojiString);
 }
 
 module.exports = {
     isFen,
     fenToEmoji,
+    createFenEmbed,
   };
