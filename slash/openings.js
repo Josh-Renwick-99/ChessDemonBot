@@ -18,6 +18,14 @@ exports.run = async (client, interaction) => {
       .setCustomId('qgd')
       .setLabel('Queens Gambit Declined')
       .setStyle('PRIMARY'),
+    new MessageButton()
+    .setCustomId('lds')
+    .setLabel('The London System')
+    .setStyle('PRIMARY'),
+    new MessageButton()
+    .setCustomId('ckd')
+    .setLabel('Caro Kann Defence')
+    .setStyle('PRIMARY'),
   );
   await interaction.reply({embeds: [openingHelpEmbed], components: [row]});
   

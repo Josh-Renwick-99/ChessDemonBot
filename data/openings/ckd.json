@@ -1,0 +1,19 @@
+{
+    "id": "ckd",
+    "name": "Caro-Kann Defense",
+    "positions": {
+      "1": "rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR",
+      "2": "rnbqkbnr/pp1ppppp/2p5/8/4P3/8/PPPP1PPP/RNBQKBNR",
+      "3": "rnbqkbnr/pp1ppppp/2p5/8/3PP3/8/PPP2PPP/RNBQKBNR",
+      "4": "rnbqkbnr/pp2pppp/2p5/3p4/3PP3/8/PPP2PPP/RNBQKBNR",
+      "5": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR"
+    },
+    "moves": {
+      "1": "e4",
+      "2": "c6",
+      "3": "d4",
+      "4": "d5",
+      "5": "e5"
+    },
+    "moveLength": "5"
+  }

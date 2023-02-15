@@ -1,0 +1,33 @@
+{
+    "id": "lds",
+    "name": "The London System",
+    "positions": {
+      "1": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR",
+      "2": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR",
+      "3": "rnbqkbnr/ppp1pppp/8/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR",
+      "4": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/8/PPP1PPPP/RN1QKBNR",
+      "5": "rnbqkb1r/ppp1pppp/5n2/3p4/3P1B2/4P3/PPP2PPP/RN1QKBNR",
+      "6": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR",
+      "7": "rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR",
+      "8": "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1P3/PP3PPP/RN1QKBNR",
+      "9": "r1bqkb1r/pp2pppp/2n2n2/2pp4/3P1B2/2P1P3/PP1R1PPP/1N1QKBNR",
+      "10": "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1P3/PP1R1PPP/1N1QKBNR",
+      "11": "r1bqkb1r/pp3ppp/2n1pn2/2pp4/3P1B2/2P1PN2/PP1R1PPP/1N1QKB1R",
+      "12": "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P1B2/2P1PN2/PP1R1PPP/1N1QKB1R"
+    },
+    "moves": {
+      "1": "d4",
+      "2": "d5",
+      "3": "Bf4",
+      "4": "nf6",
+      "5": "e3",
+      "6": "c5",
+      "7": "c3",
+      "8": "nc6",
+      "9": "Nd2",
+      "10": "e6",
+      "11": "Nf3",
+      "12": "bd6"
+    },
+    "moveLength": "12"
+  }
