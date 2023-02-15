@@ -38,8 +38,15 @@ function printBottom(emojiCache, emojiString){
     return returnString;
 }
 
-function fenToEmoji (fenString, emojiCache){
-    const fen = new FenParser(fenString);
+function fenToEmoji (fenString, emojiCache, convert){
+
+    var fen = null;
+    if (convert) {
+        fenString += " w KQkq - 0 1"
+        fen = new FenParser(fenString);
+    } else {
+        fen = new FenParser(fenString);
+    }
     const emojiNames = ["rbsw", "hbsb", "bbsw", "qbsb", "qbsw", "kbsw", "kbsb", "bbsb", "hbsw", "rbsb", "pbsb", "pbsw", "sw", "sb", "rwsw", "kwsb", "hwsb", "bwsw", "qwsb", "qwsw", "kwsw", "bwsb", "hwsw", "rwsb", "pwsb", "pwsw", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "ra", "rb", "rc", "rd", "re", "rf", "rg", "rh", "sg"];
 
     const emojis = [];
@@ -52,7 +59,6 @@ function fenToEmoji (fenString, emojiCache){
     for (let ranks of fen.ranks) {
         emojiString += '<:c'+ rankNumber + ':' + (emojis.find(emoji => emoji.name === "c" + rankNumber) + '>');
         squareColour = !squareColour;
-        console.log(ranks);
         for (let char of ranks){
             if (isNaN(char)){
                 switch(char){

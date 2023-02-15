@@ -1,0 +1,21 @@
+{
+    "id": "qga",
+    "name": "Queens Gambit Accepted",
+    "positions": {
+      "1": "rnbqkbnr/pppppppp/8/8/3P4/8/PPP1PPPP/RNBQKBNR",
+      "2": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR",
+      "3": "rnbqkbnr/ppp1pppp/8/3p4/2PP4/8/PP2PPPP/RNBQKBNR",
+      "4": "rnbqkbnr/ppp1pppp/8/8/2pP4/8/PP2PPPP/RNBQKBNR",
+      "5": "rnbqkbnr/ppp1pppp/8/8/2pPP3/8/PP3PPP/RNBQKBNR",
+      "6": "rnbqkbnr/ppp2ppp/8/4p3/2pPP3/8/PP3PPP/RNBQKBNR"
+    },
+    "moves": {
+      "1": "d4",
+      "2": "d5",
+      "3": "c4",
+      "4": "dxc4",
+      "5": "e4",
+      "6": "e5"
+    },
+    "moveLength": "6"
+  }
