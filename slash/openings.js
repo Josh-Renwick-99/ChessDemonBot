@@ -2,7 +2,7 @@ const config = require("../config.js");
 const { createOpeningHelpEmbed, createEmbedsFromOpening } = require("../modules/openingsUtils.js");
 const { settings } = require("../modules/settings.js");
 const { MessageActionRow, MessageSelectMenu, MessageButton, Message } = require('discord.js');
-const openMenu = require("../modules/openMenu.js");
+const openMenu = require("../modules/moveLineMenuScreen.js");
 
 
 exports.run = async (client, interaction) => {
@@ -19,13 +19,13 @@ exports.run = async (client, interaction) => {
       .setLabel('Queens Gambit Declined')
       .setStyle('PRIMARY'),
     new MessageButton()
-    .setCustomId('lds')
-    .setLabel('The London System')
-    .setStyle('PRIMARY'),
+      .setCustomId('lds')
+      .setLabel('The London System')
+      .setStyle('PRIMARY'),
     new MessageButton()
-    .setCustomId('ckd')
-    .setLabel('Caro Kann Defence')
-    .setStyle('PRIMARY'),
+      .setCustomId('ckd')
+      .setLabel('Caro Kann Defence')
+      .setStyle('PRIMARY'),
   );
   await interaction.reply({embeds: [openingHelpEmbed], components: [row]});
   

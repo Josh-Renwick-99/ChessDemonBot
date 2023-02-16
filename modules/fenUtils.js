@@ -2,17 +2,27 @@ const { default: FenParser } = require("@chess-fu/fen-parser");
 const { assert } = require("chai");
 const { MessageEmbed } = require('discord.js');
 
-function createFenEmbed(emojiString, turn, userName, san){
-    var ranks = emojiString.split(/\r?\n/);
-    const fenEmbed = new MessageEmbed()
-    .setColor(0x0099FF)
-	.setTitle('Game')
-	.setAuthor(userName)
-    .addField('Turn: ', turn)
-    .setDescription(emojiString)
-    .addField('Move List: ', san)
-	.setTimestamp()
-
+function createFenEmbed(emojiString, turn, userName, san, mated){
+    if (!mated){
+        return new MessageEmbed()
+        .setColor(0x0099FF)
+        .setTitle('Game')
+        .setAuthor(userName)
+        .addField('Turn: ', turn)
+        .setDescription(emojiString)
+        .addField('Move List: ', san)
+        .setTimestamp()
+    } else {
+        return new MessageEmbed()
+        .setColor(0x0099FF)
+        .setTitle('Game')
+        .setAuthor(userName)
+        .addField('Turn: ', turn) 
+        .setDescription(emojiString)
+        .addField('Move List: ', san)
+        .addField('CheckMate: ', turn === 'WHITE' ? "BLACK" : "WHITE")
+        .setTimestamp()
+    }
     return fenEmbed;
 }
 

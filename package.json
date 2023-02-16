@@ -32,6 +32,9 @@
     "discord.js": "^13.0.1",
     "dotenv": "^10.0.0",
     "enmap": "^5.8.5",
+    "node-fetch": "^3.3.0",
+    "request": "^2.81.0",
+    "undici": "^5.19.1",
     "xhr2": "^0.2.1"
   },
   "devDependencies": {
