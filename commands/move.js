@@ -27,9 +27,19 @@ exports.run = async (client, message, args, level) => {
       const fenString = game.position;
       const san = game.san;
       const mated = game.mated;
-      let emojiString = isFen(fenString) ? fenToEmoji(fenString, client.emojis.cache) : `'${fenString}' is not a valid FEN board position`;
-      const embed = createFenEmbed(emojiString, turn, userName, san, mated);
-      message.channel.send({embeds: [embed]});
+      if (!isMated){
+        let emojiString = isFen(fenString) ? fenToEmoji(fenString, client.emojis.cache) : `'${fenString}' is not a valid FEN board position`;
+        const embed = createFenEmbed(emojiString, turn, userName, san, mated);
+        message.channel.send({embeds: [embed]});
+      } else {
+        let emojiString = isFen(fenString) ? fenToEmoji(fenString, client.emojis.cache) : `'${fenString}' is not a valid FEN board position`;
+        const embed = createFenEmbed(emojiString, turn, userName, san, mated);
+        message.channel.send({embeds: [embed]});
+        fetch(`http://localhost:8081/mated?discordId=${message.author.id}`)
+          .then(response => response.json())
+          .then(data => console.log(data))
+          .catch(error => console.error(error));
+      }
     } else if (statusCode === 400){
       message.channel.send(`Move ${move} is ilegal, try again`);
     }
