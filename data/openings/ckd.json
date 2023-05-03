@@ -15,5 +15,12 @@
       "4": "d5",
       "5": "e5"
     },
+    "info": {
+      "1": "To start: White moves this pawn forward",
+      "2": "Black responds by moving this pawn",
+      "3": "Then White moves this pawn",
+      "4": "Black replies by moving his pawn here",
+      "5": "This is the Main line of the Caro–Kann Defence"
+    },
     "moveLength": "5"
   }

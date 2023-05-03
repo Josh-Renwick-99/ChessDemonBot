@@ -29,5 +29,19 @@
       "11": "Nf3",
       "12": "bd6"
     },
+    "info": {
+      "1": "To start: White moves this pawn forward",
+      "2": "Black pushes his pawn to the middle also",
+      "3": "White follows up by activating the bishop",
+      "4": "Black responds by bringing out the knight",
+      "5": "Either way, White plays the Bishop here",
+      "6": "White protects the center pawn",
+      "7": "Black attacks it",
+      "8": "White brings another pawn out to defend",
+      "9": "Black activates the second knight",
+      "10": "White activates the queenside knight",
+      "11": "Black pushes a pawn",
+      "12": "White activates the king side knight"
+    },
     "moveLength": "12"
   }

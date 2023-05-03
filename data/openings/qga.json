@@ -17,5 +17,13 @@
       "5": "e4",
       "6": "e5"
     },
+    "info": {
+    "1": "White takes the center with the pawn",
+    "2": "Black matches with the pawn",
+    "3": "White performs the gambit and allows a take on the c4 pawn",
+    "4": "Black accepts the gambit and now we are in the queens gambit accepted",
+    "5": "White pushes the E2 pawn to take the center",
+    "6": "Black matches the white pawn push"
+    },
     "moveLength": "6"
   }

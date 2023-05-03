@@ -24,6 +24,7 @@ function createEmbedsFromOpening(emojiCache, openId){
         .setColor(0x0099FF)
         .setTitle(opening.name)
         .setDescription(fenToEmoji(opening.positions[i], emojiCache, true))
+        .addFields({name: 'Infomation', value: opening.info[i], inline:true})
         .setFooter(opening.moves[i])
         .setTimestamp()
         embeds.push(openingEmbed);

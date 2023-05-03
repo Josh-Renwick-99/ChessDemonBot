@@ -31,5 +31,20 @@
       "12": "bxf6",
       "13": "e3"
     },
+    "info": {
+      "1": "White takes the center with the pawn",
+      "2": "Black matches with the pawn",
+      "3": "White performs the gambit and allows a take on the c4 pawn",
+      "4": "Black declines the gambit by pushing the e7 pawn, we are now in the queens gambit declined",
+      "5": "White responds by activating the kingside knight",
+      "6": "Black matches the pulling out the kingside knight also",
+      "7": "White actives the bishop to attack the knight",
+      "8": "Black defends the kngiht with the bishop",
+      "9": "White brings out the remaining knight",
+      "10": "Black pushes the H7 pawn",
+      "11": "White takes the knight on f6",
+      "12": "Black recaptures the bishop",
+      "13": "White pushes the e2 pawn"
+    },
     "moveLength": "13"
   }
