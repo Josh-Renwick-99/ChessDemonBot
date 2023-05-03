@@ -15,21 +15,25 @@ function createOpeningHelpEmbed(){
 function createEmbedsFromOpening(emojiCache, openId){
 
     const fs = require('fs');
-    var opening = JSON.parse(fs.readFileSync(`data/openings/${openId}.json`));
-    
-    var embeds = [];
+    if (openId === '1' || openId === '2'){
+        
+    } else {
+        var opening = JSON.parse(fs.readFileSync(`data/openings/${openId}.json`));
 
-    for (let i = 1; i <= opening.moveLength; i++){
-        const openingEmbed = new MessageEmbed()
-        .setColor(0x0099FF)
-        .setTitle(opening.name)
-        .setDescription(fenToEmoji(opening.positions[i], emojiCache, true))
-        .addFields({name: 'Infomation', value: opening.info[i], inline:true})
-        .setFooter(opening.moves[i])
-        .setTimestamp()
-        embeds.push(openingEmbed);
+        var embeds = [];
+
+        for (let i = 1; i <= opening.moveLength; i++){
+            const openingEmbed = new MessageEmbed()
+            .setColor(0x0099FF)
+            .setTitle(opening.name)
+            .setDescription(fenToEmoji(opening.positions[i], emojiCache, true))
+            .addFields({name: 'Infomation', value: opening.info[i], inline:true})
+            .setFooter(opening.moves[i])
+            .setTimestamp()
+            embeds.push(openingEmbed);
+        }
+        return embeds;
     }
-    return embeds;
 }
 
 module.exports ={
