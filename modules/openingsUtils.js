@@ -16,7 +16,7 @@ function createEmbedsFromOpening(emojiCache, openId){
 
     const fs = require('fs');
     var opening = JSON.parse(fs.readFileSync(`data/openings/${openId}.json`));
-
+    
     var embeds = [];
 
     for (let i = 1; i <= opening.moveLength; i++){
